@@ -71,7 +71,24 @@ Prompt C：請幫我重構這段程式碼，提升它的可讀性和維護性。
 請貼上執行程式並輸入 show 後，顯示資料清單。(請從呼叫執行程式到結束程式完整的把操作對話複製到下框)
 
 ```log
-
+PS C:\Users\pclab\Desktop\NTUST-0527-Final-master> python modern_library.py
+=== 圖書管理系統 v1.0 (Modern) ===
+> add 深入淺出Python/978001/available
+成功新增書籍！
+> add 資料結構理論/978002/available
+成功新增書籍！
+> add 演算法實作/978003/available
+成功新增書籍！
+> add 重複測試書/978001/available
+ISBN 已存在，無法新增。
+> borrow 978002
+成功借出書籍！
+> show
+書名: 深入淺出Python, ISBN: 978001, 狀態: available
+書名: 資料結構理論, ISBN: 978002, 狀態: borrowed
+書名: 演算法實作, ISBN: 978003, 狀態: available
+> exit
+系統資料已儲存，程式結束。
 ```
 
 ### 3.2 產出的資料檔案格式
@@ -81,10 +98,20 @@ Prompt C：請幫我重構這段程式碼，提升它的可讀性和維護性。
 ```json
 [
   {
-    "title": "XXX",
-    "isbn": "XXX",
-    "status": "XXX"
-  }
+        "title": "深入淺出Python",
+        "isbn": "978001",
+        "status": "available"
+    },
+    {
+        "title": "資料結構理論",
+        "isbn": "978002",
+        "status": "borrowed"
+    },
+    {
+        "title": "演算法實作",
+        "isbn": "978003",
+        "status": "available"
+    }
 ]
 ```
 
@@ -96,7 +123,13 @@ Prompt C：請幫我重構這段程式碼，提升它的可讀性和維護性。
 
 
 ```log
-# 請在此處貼上 git log 內容
+ echo "# NTUST-0527-Final-master" >> README.md
+>> git init
+>> git add README.md
+>> git commit -m "first commit"
+>> git branch -M main
+>> git remote add origin https://github.com/was0976199378-ux/NTUST-0527-Final-master.git
+>> git push -u origin main
 ```
 
 ### 4.2. GitHub Repository 連結(此小題7分)
