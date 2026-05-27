@@ -16,7 +16,7 @@
 
 | 原始變數名稱 | 代表意義 (Business Logic) | 建議修正名稱 |
 |---|---|---|
-| Q1 l1 (in load_proc) | 是一個暫時的變數，用來儲存從檔案 lib_data.txt 中讀取的所有行|每一行代表一筆圖書資料，這些資料會被進一步解析並存入全域變|file_lines|
+| Q1 l1 (in load_proc) | 是一個暫時的變數，用來儲存從檔案 lib_data.txt 中讀取的所有行每一行代表一筆圖書資料，這些資料會被進一步解析並存入全域變|file_lines|
 | Q2 d2 (in main) |是一個全域的清單，用來儲存所有圖書的資料,在程式啟動時，load_proc() 函式會從檔案 lib_data.txt 中讀取資料，並將每筆圖書資料解析後存入 d2。 |library_data|
 | Q3 c_res (in check) |是一個函式，用來檢查某個 ISBN 是否已經存在於 d2 中。如果找到相符的 ISBN，回傳 True；否則回傳 False。他可以在新增圖書（add 指令）時，避免重複的 ISBN 被加入。 |is_isbn_exist|
 
